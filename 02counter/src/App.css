@@ -4,6 +4,15 @@
   padding: 2rem;
   text-align: center;
 }
+h2{
+  margin-bottom: 48px;
+}
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 44px;
+}
 
 .logo {
   height: 6em;
