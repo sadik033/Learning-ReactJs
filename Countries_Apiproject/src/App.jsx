@@ -7,16 +7,17 @@ import CountriesList from './component/CountriesList'
 
 
 
-function App() {
+const App = () => {
+  const [query, setQuery] = useState('')
   return (
     <>
     <Header/>
     <main>
     <div className='search-filter-container'>
-    <SearchBar/>
+    <SearchBar setQuery={setQuery} />
     <SelectMenu/>
     </div>
-    <CountriesList/>
+    <CountriesList query={query} />
     </main>
     </>
   )
