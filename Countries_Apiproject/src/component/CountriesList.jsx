@@ -7,7 +7,6 @@ export default function CountriesList({query}) {
 
  
   const [CountriesData, setCountriesData] = useState([])
-  const [count, setCount]= useState(0)
 
   useEffect(()=>{
     fetch('https://restcountries.com/v3.1/all')
@@ -17,14 +16,8 @@ export default function CountriesList({query}) {
       })
   },[])
 
-  useEffect(()=>{
-    console.log('Hiii')
-  },[count])
-
   return (
     <>
-    <h1>{count}</h1>
-    <button onClick={()=> setCount(count+1)} >Increse</button>
     <div className="countries-container">{
     CountriesData.filter((country) => 
     country.name.common.toLowerCase().includes(query) ).map( (country) => {
