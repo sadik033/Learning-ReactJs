@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './CountryDetails.css'
 import { Link, useParams } from "react-router-dom";
+import CountryDetailsShimmer from "./CountryDetailsSimmer"
 
 export default function CountryDetails(){
 
@@ -10,12 +11,14 @@ export default function CountryDetails(){
     const [countryData, setCountryData]= useState(null)
     const [notFound, setNotFound] = useState(false)
 
-    console.log(countryData?.borders);
+    
 
     useEffect(()=>{
         fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
         .then(res => res.json())
         .then(([data])=>{
+
+            
             
             setCountryData({
                 name:data.name.common,
@@ -48,14 +51,18 @@ export default function CountryDetails(){
             setNotFound(true)
         })
     }, [countryName])
+    
     if(notFound){
         return <div>Country Not FOUND....</div>
+
     }
     return(
-        countryData === null ? ('loading.....'
+        countryData === null ? ( <CountryDetailsShimmer/>
 
         ) : (
+           
         <main>
+            
         <div className="country-details-container">
             <a href="#" className ="back-button" onClick={() => history.back()}>
                 <i className="fa-solid fa-arrow-left"></i>&nbsp;  Back</a>
@@ -97,6 +104,9 @@ export default function CountryDetails(){
         </div>
         </div>
      </main>
+     
         )
-    )
+    ) 
+
+    
 }
