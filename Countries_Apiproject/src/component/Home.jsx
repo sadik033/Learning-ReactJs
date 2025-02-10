@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from 'react'
 import SearchBar from './SearchBar'
 import SelectMenu from './SelectMenu'
 import CountriesList from './CountriesList'
+import { ThemeContext } from "../../contexts/ThemeContext";
 
 export default function Home(){
     const [query, setQuery] = useState('')
+    const a = useContext(ThemeContext)
+    console.log(a);
     return(
         <main>
         <div className='search-filter-container'>
