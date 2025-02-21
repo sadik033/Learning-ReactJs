@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useState } from 'react'
 import SearchBar from './SearchBar'
 import SelectMenu from './SelectMenu'
@@ -8,12 +8,13 @@ import { ThemeContext } from "../../contexts/ThemeContext";
 export default function Home(){
     const [query, setQuery] = useState('')
     const a = useContext(ThemeContext)
-    console.log(a);
+    
+    
     return(
         <main>
         <div className='search-filter-container'>
         <SearchBar setQuery={setQuery} />
-        <SelectMenu/>
+        <SelectMenu  setQuery={setQuery} />
         </div>
         <CountriesList query={query} />
         </main>
