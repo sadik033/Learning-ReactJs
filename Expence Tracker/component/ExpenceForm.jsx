@@ -1,14 +1,20 @@
 import React from "react";
 
-export default function ExpenceForm(){
+export default function ExpenceForm({setExpenses}){
   const handleSubmit = (e) =>{
     e.preventDefault()
-    const formData = new FormData(e.target);
+    const expense =  {...getFormData(e.target), id: crypto.randomUUID() }
+    setExpenses((prevState) => [...prevState, expense])
+    e.target.reset()
+  }
+
+  const getFormData = (form) =>{
+    const formData = new FormData(form);
     const data ={}
     for (const [key ,value] of formData.entries()) {
       data[key] = value
     }
-    console.log(data);
+    return data
   }
     return(
         <form className="expense-form" onSubmit={handleSubmit} >
