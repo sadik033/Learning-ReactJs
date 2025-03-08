@@ -6,6 +6,7 @@ import expenceData from '../component/expenceData'
 
 function App() {
   const [expenses, setExpenses] = useState(expenceData)
+  // const [total, setTotal] = useState(expenceData)
 
   return (
     <main>

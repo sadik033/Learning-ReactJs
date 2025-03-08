@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function ExpenceTable({expenses}){
+
     return(
         <table className="expense-table">
         <thead>
