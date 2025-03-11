@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+import { useFilter } from "../hooks/useFilter";
 
 export default function ExpenceTable({expenses}){
+  const [filteredData, setQuery] = useFilter(expenses, (data) => data.category)
+
+  const total = filteredData.reduce((acc, curr) => acc + curr.amount, 0)
 
     return(
         <table className="expense-table">
@@ -8,7 +12,7 @@ export default function ExpenceTable({expenses}){
           <tr>
             <th>Title</th>
             <th>
-              <select>
+              <select onChange={((e)=> setQuery(e.target.value.toLocaleLowerCase()))}>
                 <option value="">All</option>
                 <option value="grocery">Grocery</option>
                 <option value="clothes">Clothes</option>
@@ -49,7 +53,7 @@ export default function ExpenceTable({expenses}){
         <tbody>
 
 
-            {expenses.map(({id, title, category, amount}) =>(
+            {filteredData.map(({id, title, category, amount}) =>(
               <tr key={id}>
               <td>{title}</td>
               <td>{category}</td>
@@ -59,8 +63,8 @@ export default function ExpenceTable({expenses}){
             <tr>
             <th>Total</th>
             <th></th>
-            <th>₹8100</th>
-          </tr>
+            <th>₹{total}</th>
+          </tr> 
         </tbody>
       </table>
     )
