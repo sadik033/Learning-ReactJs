@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./component/Header/Header";
 import Counter from "./component/Header/UI/counter";
 import Hero from "./component/Header/UI/Hero";
+import Services from "./component/Header/UI/services";
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <Header/>
     <Hero/>
     <Counter/>
+    <Services/>
     </>
   )
 }

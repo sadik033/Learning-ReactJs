@@ -31,10 +31,10 @@ export default function Header(){
                     </div> 
                     {/*========= navigation =======*/}
                     <div className="navigation">
-                        <ul className="menu">
+                        <ul className="menu" >
                             {
                                 nav_links.map((item,index) =>(
-                                  <li className="menu_item"><a href={item.path} className="menu_link">
+                                  <li className="menu_item" key={index}><a href={item.path} className="menu_link">
                                     {item.display}
                                     </a></li>  
                                 ))
@@ -43,7 +43,7 @@ export default function Header(){
                     </div>
                     {/*========= light mode =======*/}
                     <div className="light_mode">
-                        <span><i class="ri-sun-line"></i>Light Mode</span>
+                        <span><i className="ri-sun-line"></i>Light Mode</span>
                     </div>
                 </div>
             </div>
