@@ -26,7 +26,7 @@ export default function Header(){
             <div className="container">
                 <div className="nav_wrapper">
                    <div className="logo">
-                    <h2>SADIk</h2>
+                    <h2>SADIK</h2>
                     {/* <p>Grow with us</p> */}
                     </div> 
                     {/*========= navigation =======*/}
