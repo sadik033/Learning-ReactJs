@@ -21,6 +21,7 @@
     list-style: none;
     justify-content:center;
     gap: 40px;
+    color: rgb(65, 35, 68);
 }
 .top-nav .logo{
     color: white;
@@ -37,16 +38,44 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 20px;
+    overflow: hidden;
 }
 .top-nav .search-box input{
     width: 70%;
     height: 100%;
     padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 15px;
 }
 .top-nav .search-box button{
     width: 30%;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
+    font-size: 30px;
+    background-color: white;
+    border: none;
+    padding-right: 20px;
+}
+.cart-box{
+    position: relative;
+}
+.cart-box svg{
+    color: white;
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+}
+.cart-box span{
+    color: white;
+    position: absolute;
+    top: -13px;
+}
+@media (max-width:750px) {
+    .top-nav .search-box{
+        display: none;
+    }
 }
