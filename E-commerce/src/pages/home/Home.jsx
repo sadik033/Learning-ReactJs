@@ -12,7 +12,7 @@ function Home() {
             </div>
             
         <div className="category-section">
-            {category.map((item) =>(
+            {category.slice(0,5).map((item) =>(
                 <div className="category-card">
                     <img src={item.Image} alt="" />
                     <span>{item.name}</span>
