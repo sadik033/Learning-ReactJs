@@ -46,3 +46,9 @@
     width: 100%;
     height: 70%;
 }
+.home h1{
+    text-align: center;
+    padding: 50px;
+    color:linear-gradient(90deg, #5e46e4, #d34bd3);
+    
+}

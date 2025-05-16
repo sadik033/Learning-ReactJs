@@ -3,6 +3,7 @@ import Nav from "../../components/nav/Nav";
 import bg from "../../assets/bg0.gif"
 import "./Home.css"
 import { category } from "../../Category"; 
+import { dummydata } from "../../dummydata"; 
 import Product from "../../components/Product/Product";
 
 
@@ -21,8 +22,12 @@ function Home() {
                 </div>
             ))}
             </div>
-            <h1 >Trending Products</h1>
-            <Product/>
+            <h1 >Trending Products</h1> 
+            <div className="product-section">
+                {dummydata.map((item) =>(
+                    <Product name={item.name} price={item.price} image={item.image}/>
+                ))}
+            </div>
         </div>
     )
 } 
