@@ -24,7 +24,7 @@ function Home() {
             </div>
             <h1 >Trending Products</h1> 
             <div className="product-section">
-                {dummydata.map((item) =>(
+                {dummydata.slice(0,11).map((item) =>(
                     <Product name={item.name} price={item.price} image={item.image}/>
                 ))}
             </div>
