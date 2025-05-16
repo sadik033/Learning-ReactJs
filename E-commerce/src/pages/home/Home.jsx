@@ -2,7 +2,9 @@ import React from "react";
 import Nav from "../../components/nav/Nav";
 import bg from "../../assets/bg0.gif"
 import "./Home.css"
-import { category } from "../../Category";
+import { category } from "../../Category"; 
+import Product from "../../components/Product/Product";
+
 
 function Home() {
     return(
@@ -19,6 +21,8 @@ function Home() {
                 </div>
             ))}
             </div>
+            <h1 >Trending Products</h1>
+            <Product/>
         </div>
     )
 } 
