@@ -8,7 +8,7 @@ import all from './assets/emptycart.png'
 export const category=[
     {
         id:1,
-        name:"electronics",
+        name:"Electronics",
         Image: elec,
     },
     {
