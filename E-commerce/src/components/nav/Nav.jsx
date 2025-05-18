@@ -4,8 +4,12 @@ import { IoSearchOutline } from "react-icons/io5";
 import { IoCartOutline } from "react-icons/io5";
 import "./Nav.css"
 import { Link } from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux"
 
 function Nav() {
+    let dispatch= useDispatch()
+    let Items= useSelector(state=>state)
+    console.log(Items)
     return(
         <div className="nav">
             <div className="top-nav">
@@ -19,7 +23,7 @@ function Nav() {
                 </form>
                 <div className="cart-box">
                     <IoCartOutline />
-                    <span>0</span>
+                    <span>{Items.cart.length}</span>
                 </div>
             </div>
             <div className="bottom-nav">
