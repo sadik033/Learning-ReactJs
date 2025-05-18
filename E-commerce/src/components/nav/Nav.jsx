@@ -3,15 +3,16 @@ import { FaShopify } from "react-icons/fa6";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoCartOutline } from "react-icons/io5";
 import "./Nav.css"
+import { Link } from "react-router-dom";
 
 function Nav() {
     return(
         <div className="nav">
             <div className="top-nav">
-                <div className="logo">
+                <Link to="/"><div className="logo">
                     <span>V-shop</span>
                     <FaShopify />
-                </div>
+                </div></Link>
                 <form className="search-box">
                     <input type="text" placeholder="Search Items..." />
                     <button><IoSearchOutline /></button>
@@ -22,10 +23,10 @@ function Nav() {
                 </div>
             </div>
             <div className="bottom-nav">
-                <li>Home</li>
-                <li>Shop</li>
-                <li>Cart</li>
-                <li>Contact</li>
+                <Link to="/"><li>Home</li></Link>
+                <Link to="/shop"><li>Shop</li></Link>
+                <Link to="/cart"><li>Cart</li></Link>
+                <Link to="/contact"><li>Contact</li></Link>
             </div>
         </div>
     )
