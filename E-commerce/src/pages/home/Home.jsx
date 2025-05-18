@@ -8,8 +8,9 @@ import Product from "../../components/Product/Product";
 function Home() {
   let [cate, setCate] = useState(dummydata);
   function filterProduct(category) {
-    const updatedata = dummydata.filter((item) => item.category === category);
+       const updatedata = dummydata.filter((item) => item.category === category);
     setCate(updatedata);
+    
   }
   return (
     <div className="home">

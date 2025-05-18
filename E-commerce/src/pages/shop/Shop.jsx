@@ -6,16 +6,21 @@ import Product from "../../components/Product/Product";
 
 function Shop() {
     let [cate, setCate] = useState(dummydata);
-      function filterProduct(category) {
-        const updatedata = dummydata.filter((item) => item.category === category);
+      function filterProduct(category){
+        if(category==="All"){
+          setCate(dummydata)
+        }else{
+          const updatedata = dummydata.filter((item) => item.category === category);
         setCate(updatedata);
+        }
+        
       }
   return (
     <div className="shop">
       <div className="category-section">
         {category.map((item) => (
           <div
-            className="category-card"
+            className="category-card" 
             onClick={() => {
               filterProduct(item.name);
             }}
@@ -27,7 +32,7 @@ function Shop() {
       </div>
       <div className="product-section">
         {cate.map((item) => (
-          <Product name={item.name} price={item.price} image={item.image} />
+          <Product name={item.name} price={item.price} image={item.image} id={item.id} />
         ))}
       </div>
     </div>

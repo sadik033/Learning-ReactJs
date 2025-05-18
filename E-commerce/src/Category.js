@@ -3,7 +3,7 @@ import fash from './assets/fashion.png'
 import beauty from './assets/beauty.jpg'
 import home from './assets/home.jpg'
 import sport from './assets/sports.jpg'
-import all from './assets/emptycart.png'
+import All from './assets/emptycart.png'
 
 export const category=[
     {
@@ -34,6 +34,6 @@ export const category=[
     {
         id: 6,
         name:"All",
-        Image: all,
+        Image: All,
     }
 ]
