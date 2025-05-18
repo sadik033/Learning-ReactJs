@@ -3,6 +3,7 @@ import "./Shop.css";
 import { category } from "../../Category";
 import { dummydata } from "../../dummydata";
 import Product from "../../components/Product/Product";
+import { FaShopify } from "react-icons/fa6";
 
 function Shop() {
     let [cate, setCate] = useState(dummydata);
@@ -17,6 +18,10 @@ function Shop() {
       }
   return (
     <div className="shop">
+      <div className="heading">
+        <span>Shop</span>
+        <FaShopify />
+      </div>
       <div className="category-section">
         {category.map((item) => (
           <div
