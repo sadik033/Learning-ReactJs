@@ -8,6 +8,20 @@
     padding: 20px;
     border-radius: 12px;
 }
+/* .cartcard {
+    width: 90%;
+    height: 180px;
+    background: #f2f2f6;
+    box-shadow: 0 6px 18px rgba(9, 2, 2, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 30px;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e0e0;
+} */
+
 .left-card img{
     max-width: 50%;
     height: 100%;
@@ -25,7 +39,7 @@
     gap: 8px;
     font-size: 20px;
 }
-.right-card button{
+/* .right-card button{
     background-color: rgb(227, 21, 21);
     color: white;
     padding: 10px 20px;
@@ -36,6 +50,25 @@
 }
 .right-card button:hover{
     opacity: 0.8;
+} */
+ .right-card button {
+    background: linear-gradient(135deg, #e91e63, #ff5722);
+    color: white;
+    padding: 12px 28px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.right-card button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    opacity: 0.95;
 }
 @media (max-width:750px){
     .cartcard{
