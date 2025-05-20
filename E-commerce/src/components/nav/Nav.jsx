@@ -22,7 +22,7 @@ function Nav() {
                     <button><IoSearchOutline /></button>
                 </form>
                 <div className="cart-box">
-                    <IoCartOutline />
+                  <Link to="/cart">  <IoCartOutline /></Link>
                     <span>{Items.cart.length}</span>
                 </div>
             </div>

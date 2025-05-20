@@ -1,19 +1,24 @@
 import React from "react";
 import "./CartCard.css"
 import image1 from "../../assets/image1.jpg"
+import {useDispatch} from "react-redux"
 import { MdDeleteSweep } from "react-icons/md";
-function CartCard(){
+import { RemoveItem } from "../../redux/cartSlice";
+function CartCard({name, price, image,id}){
+    let dispatch= useDispatch()
     return(
         <div className="cartcard">
             <div className="left-card">
-                <img src={image1} alt="" />
+                <img src={image} alt="" />
                 <div className="name-price">
-                    <span>Samsung</span>
-                    <span>Rs 15000/-</span>
+                    <span> {name}</span>
+                    <span>Rs {price}/-</span>
                 </div>
             </div>
             <div className="right-card">
-                <button>Remove <MdDeleteSweep /></button>
+                <button onClick={()=>{
+                    dispatch(RemoveItem(id))
+                }}>Remove <MdDeleteSweep/></button>
             </div>
         </div>
     )
