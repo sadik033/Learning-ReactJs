@@ -4,7 +4,7 @@ import "./Contact.css"
 function Contact(){
     return(
         <div className="contact">
-            <form action="">
+            <form action="https://formspree.io/f/mvganokv" method='POST'>
                 <input type="text" placeholder="Enter Your Name..." name="username" required/>
                 <input type="email" placeholder="Email"  name="email" required/>
                 <textarea name="message"  placeholder="Message" required></textarea>
