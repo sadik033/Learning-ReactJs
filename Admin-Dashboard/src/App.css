@@ -1,0 +1,11 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: rgba(117, 232, 222, 0.639);
+}
+
+.App{
+ background: beige;
+  font-family: "Inter", sans-serif;
+}
