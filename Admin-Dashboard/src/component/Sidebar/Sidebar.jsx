@@ -19,7 +19,10 @@ const Sidebar = () => {
         {SidebarData.map((item, index) => {
           return (
             <div className={selected===index?'menuItem active': 'menuItem'} 
-            key={index}>
+            key={index}
+            onClick={()=> setSelected(index)}
+            
+            >
               
               {item.icon}
               <span>{item.heading}</span>
