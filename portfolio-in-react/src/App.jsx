@@ -1,11 +1,13 @@
 import React from 'react'
 import Portfolio from './Portfolio'
-import navbar from './navbar/navbar'
+import Navbar from './navbar/Navbar'
+import './App.css'
+
 
 const App = () => {
   return (
     <>
-    <navbar/>
+    <Navbar/>
    <Portfolio/>
    </>
   )
