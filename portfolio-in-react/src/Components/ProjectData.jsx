@@ -9,7 +9,7 @@
     info: [<li>Search Functionality – Quickly find products by name</li>,
           <li> Filtering – Filter products by category</li>,
           <li>Cart Management – Add & remove items from the cart.</li>,
-          <li>Price Calculation – Automatically calculates the total price of items in the cart.</li>,
+          <li> Automatically calculates the total price of items in the cart.</li>,
           <li> State Management with Redux – Efficient handling of global state across components.</li>
         ]
     ,
@@ -21,6 +21,13 @@
   {
     title: 'Country Explorer (REST API Project)',
     description: 'A responsive web application built using React that fetches and displays country data from a public REST API..',
+    info: [<li>Fetched country data using fetch() from the REST Countries API</li>,
+          <li>Filter by Region – Filter the country list by continents/regions.</li>,
+          <li> Dark Mode Toggle – Seamless light/dark theme.</li>,
+          <li>Responsive Design – Optimized layout for both desktop and mobile.</li>,
+          
+        ]
+    ,
     tech: ['React', 'JavaScript', 'CSS', 'RestAPI'],
     image: project3,
     live: 'https://e-commerce-sadik.netlify.app/',
