@@ -30,7 +30,7 @@ const Sidebar = () => {
           );
         })}
         <div className="menuItem">
-          <i class="ri-arrow-right-circle-line"></i>
+          <i className="ri-arrow-right-circle-line"></i>
         </div>
 
       </div>

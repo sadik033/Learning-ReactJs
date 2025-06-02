@@ -1,22 +1,22 @@
 export const SidebarData = [
     {
-     icon: <i class="ri-home-3-line"></i>,
+     icon: <i className="ri-home-3-line"></i>,
      heading: "Dashboard",   
     },
     {
-     icon: <i class="ri-window-line"></i>,
+     icon: <i className="ri-window-line"></i>,
      heading: "Order",   
     },
     {
-     icon: <i class="ri-window-line"></i>,
+     icon: <i className="ri-window-line"></i>,
      heading: "Customer",   
     },
     {
-     icon: <i class="ri-mobile-download-line"></i>,
+     icon: <i className="ri-mobile-download-line"></i>,
      heading: "Products" ,  
     },
     {
-     icon: <i class="ri-code-s-slash-line"></i>,
+     icon: <i className="ri-code-s-slash-line"></i>,
      heading: "Analytics" ,  
     },
 
@@ -31,7 +31,7 @@ export const CardData =[
         },
         barValue: 70,
         value: "25,970",
-        png: <i class="ri-money-dollar-box-line"></i>,
+        png: <i className="ri-money-dollar-box-line"></i>,
         series:[
             {
                 name: "Sales",
@@ -47,7 +47,7 @@ export const CardData =[
         },
         barValue: 70,
         value: "14,270",
-        png: <i class="ri-money-dollar-box-line"></i>,
+        png: <i className="ri-money-dollar-box-line"></i>,
         series:[
             {
                 name: "Revenue",
@@ -63,7 +63,7 @@ export const CardData =[
         },
         barValue: 70,
         value: "4,270",
-        png: <i class="ri-money-dollar-box-line"></i>,
+        png: <i className="ri-money-dollar-box-line"></i>,
         series:[
             {
                 name: "Expenses",

@@ -7,23 +7,24 @@ const Card = (props) => {
   return (
       <AnimateSharedLayout>
         {
-          expanded?(
+          expanded? (
             'Expanded'
-          ):<CompactCard param = {props} />
+          ):
+          <CompactCard param = {props} />
         }
       </AnimateSharedLayout>
   )
 }
 
 function CompactCard ({param}){
-  const Png = param.png;
+  // const Png = param.png;
   return(
     <div className="CompactCard">
       <div className="radialBar">
         Chart
       </div>
       <div className="details">
-        <Png/>
+        {/* <Png/> */}
         <span>${param.value}</span>
         <span>Last 24 hours</span>
       </div>
