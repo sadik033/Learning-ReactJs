@@ -15,11 +15,11 @@ main {
     box-sizing: border-box;
 }
 
-/* .expense-tracker {
+ .expense-tracker {
     display: flex;
     gap: 32px;
 }
-
+/*
 .expense-form {
     width: 100%;
 }
